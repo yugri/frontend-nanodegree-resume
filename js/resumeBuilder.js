@@ -80,3 +80,10 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
 $("#main").prepend(bio["city"]);
+
+if (bio.skills.length != 0) {
+    $("#header").append(HTMLskillsStart);
+    for (var i=0; i<=bio.skills.length-1; i++) {
+        $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+    }
+}
