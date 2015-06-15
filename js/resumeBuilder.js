@@ -33,13 +33,15 @@ var work = [
         "employee": "Walker",
         "title": "policeman",
         "location": "Texas",
-        "dates": "2004-2007"
+        "dates": "2004-2007",
+        "description": "Job desc..."
     },
     {
         "employee": "Elcom",
         "title": "service engineer",
         "location": "Kiev",
-        "dates": "2008-2011"
+        "dates": "2008-2011",
+        "description": "Job desc..."
     }
 ];
 var projects = [
@@ -87,5 +89,22 @@ if (bio.skills.length != 0) {
         $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
     }
 }
+
+
+function displayWork() {
+    for (var j = 0; j <= work.length - 1; j++) {
+        $("#workExperience").append(HTMLworkStart);
+        var formattedEmployeeTitle = HTMLworkEmployer.replace("%data%", work[j].employee) + HTMLworkTitle.replace("%data%", work[j].title);
+        var formattedDates = HTMLworkDates.replace("%data%", work[j].dates);
+        var formattedDescription = HTMLworkDescription.replace("%data%", work[j].description);
+        $(".work-entry:last").append(formattedEmployeeTitle).append(formattedDates).append(formattedDescription);
+    }
+}
+
+displayWork();
+
+$(document).click(function(loc) {
+    logClicks(loc.pageX, loc.pageY);
+});
 
 
