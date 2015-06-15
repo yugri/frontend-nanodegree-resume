@@ -5,8 +5,8 @@ var awesomeThoughts,
     name,
     role;
 
-name = "Yuri Gritsai";
-role = "Web Developer";
+name = "Chuck Norris";
+role = "Texas Ranger";
 // awesomeThoughts = "I am Yuri and I am AWESOME!";
 // funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
 // $("#main").append(funThoughts);
@@ -30,9 +30,9 @@ var bio = {
 
 var work = [
     {
-        "employee": "Mr. Snack",
-        "title": "manager",
-        "location": "Kiev",
+        "employee": "Walker",
+        "title": "policeman",
+        "location": "Texas",
         "dates": "2004-2007"
     },
     {
@@ -87,3 +87,5 @@ if (bio.skills.length != 0) {
         $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
     }
 }
+
+
